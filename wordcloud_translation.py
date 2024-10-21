@@ -1,7 +1,7 @@
 from googletrans import Translator
 import pandas as pd
 
-df = pd.read_csv(my_file_path)
+df = pd.read_csv(my_file_path, encoding='utf-16', delimiter=',', quotechar='"', on_bad_lines='skip')
 translator = Translator()
 
 translation_success = 0
